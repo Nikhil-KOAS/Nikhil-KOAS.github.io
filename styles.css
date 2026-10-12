@@ -140,6 +140,52 @@ button {
     font-weight: inherit;
 }
 
+button.login-button{
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: #8B1E1E;
+    width: 100px;}
+input.login-button{
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    background-color: #8B1E1E;
+    width: 100px;
+    border-style: solid;
+    border-color: #C9A227;
+}
+form{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    font-size: 20px;
+    color:#8B1E1E;
+
+}
+
+.login-input{
+    background-color:#D7C7A3;
+    border-color:#8B1E1E;
+    height: 35px;
+    border-radius: 5px;
+    border-style: solid;
+    color: #8B1E1E;
+    width: 17.5%;
+    border-width: 2px;
+}
+
+button.sign-up-button{
+        position: absolute;
+        font-size: 25px;
+        top: 120px;
+        left: 20px;
+        color: white;
+        background-color: #8B1E1E;
+        width: 150px;
+}
 button:hover {
     background-color: var(--hover-color);
 }
@@ -156,6 +202,8 @@ div.OtherInputs {
     -webkit-appearance: none; /* For Safari */
     display: none;
 }
+
+
 
 .OtherInputs label {
     display: inline-block; 
@@ -316,6 +364,10 @@ div.Test input:focus {
 
 #AboveBar {
     display: flex;
+}
+/* Login Section */
+.login{
+    display: none;
 }
 
 /* Scrollbar styling for Info div */
