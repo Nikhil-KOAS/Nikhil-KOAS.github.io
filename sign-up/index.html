@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">  <!--For the font-->
     <meta charset="UTF-8">
     <meta id = "" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latin Tester - Login</title>
     <link rel="stylesheet" href="./../styles.css">
-    <script language = 'JavaScript' src = "./../app.js">
-    </script>
+    <script language = 'JavaScript' src = "./../app.js"></script>
+    <!--<script language="JavaScript" src="./../login-manager.js"></script> -->
     <link rel="icon" href="./../LaurelLogo2.png">
 </head>
 <body>
-    <form action="./../login-manager.js" id="sign-up">
+    <form id="sign-up">
         <strong><label>Enter your username: </label></strong> <input type="text" name="username" class="login-input" id="signup-username"><br><br>
         <strong><label>Enter your email: </label></strong> <input type="email" class="login-input" name="email" id="signup-email"><br><br>
-        <strong><label>Enter your real name (This is used for teacher feedback etc. ): </label></strong> <input type="text" name="realname" id="signup-name" class="login-input" ><br><br>
+        <strong><label>Enter your name (This is used for teacher feedback etc. ): </label></strong> <input type="text" name="realname" id="signup-name" class="login-input" ><br><br>
         <strong>Enter your password: </label></strong> <input class="login-input" type="password" name="password" id="signup-password"><br><br>
         <strong>Enter your latin teacher: </label></strong> <select class="login-input" name="teacher" id="teacher">
             <option value="forrest">Mr Forrest</option>
             <option value="melvill">Mr Melvill</option>
             <option value="comani">Ms Comani</option>
         </select><br><br>
-        <strong>Enter your current school year: </label></strong> <select class="login-input" name="teacher" id="teacher" >
+        <strong>Enter your current school year: </label></strong> <select class="login-input" name="year" id="year" >
             <option value="seven">Year 7</option>
             <option value="eight">Year 8</option>
             <option value="nine">Year 9</option>
             <option value="ten" selected="selected">Year 10</option>
             <option value="eleven">Year 11</option>
         </select><br><br>
-        <input type="submit" value="Sign Up" class="login-button">
-
+        <input type="submit" value="Sign Up" class="login-button" id="sign-up">
     </form>
+    <script>
+</script>
 </body>
 </html>
