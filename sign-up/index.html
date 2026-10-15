@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script  src="./../login-manager.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">  <!--For the font-->
     <meta charset="UTF-8">
     <meta id = "" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latin Tester - Login</title>
     <link rel="stylesheet" href="./../styles.css">
-    <script language = 'JavaScript' src = "./../app.js"></script>
-    <!--<script language="JavaScript" src="./../login-manager.js"></script> -->
+    <script src="./../login-manager.js"></script> 
     <link rel="icon" href="./../LaurelLogo2.png">
 </head>
 <body>
-    <form id="sign-up">
+    <form onsubmit="sendData()" action="#" id="">
         <strong><label>Enter your username: </label></strong> <input type="text" name="username" class="login-input" id="signup-username"><br><br>
         <strong><label>Enter your email: </label></strong> <input type="email" class="login-input" name="email" id="signup-email"><br><br>
         <strong><label>Enter your name (This is used for teacher feedback etc. ): </label></strong> <input type="text" name="realname" id="signup-name" class="login-input" ><br><br>
@@ -31,7 +30,29 @@
         </select><br><br>
         <input type="submit" value="Sign Up" class="login-button" id="sign-up">
     </form>
-    <script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCkR2ndV54OcsK-cA7XKOq7pRY5EVMO74M",
+    authDomain: "latintester-411d1.firebaseapp.com",
+    databaseURL: "https://latintester-411d1-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "latintester-411d1",
+    storageBucket: "latintester-411d1.firebasestorage.app",
+    messagingSenderId: "935289943924",
+    appId: "1:935289943924:web:4d9f1744fe2fecc41f1e21",
+    measurementId: "G-9VS6LVLH5G"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
 </body>
 </html>

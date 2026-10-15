@@ -1,14 +1,8 @@
-confirm("Function  run!")
 
-import { createClient } from '@supabase/supabase-js'
-// creates the client to send data to the server i think 
-const supabase = createClient('https://kryurizvvrnssyrmcvsw.supabase.co/rest/v1/', 'sb_publishable_rjU9eKvVV_kjLttMBa4hog_7k-WTxvp')
-/* const { data } = await supabase.from('profiles').select('*')
-console.log(data) */
-
-const form = document.querySelector("#sign-up");
 async function sendData() {
+    const form = document.getElementById("sign_up")
     const formData = new FormData(form);
+    console.log(formData)
     username=formData.get("username")
     email=formData.get("email")
     password=formData.get("password")
@@ -36,19 +30,6 @@ async function sendData() {
             "accuracy": [], //The average score on each word (Should let us tell the user what they are struggling on)
             "xp": 0 //Displayed on leaderboards
         } 
-    }
-  try { // checks for errors
-    const { error } = await supabase
-  .from('Accounts')
-  .insert(data)
-  } catch (e) { // runs if errors
-    console.error(e);
-  }
 }
-
-// Runs function if submit pressed
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  sendData();
-});
+  
+}
